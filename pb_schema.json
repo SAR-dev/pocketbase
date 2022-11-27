@@ -150,6 +150,19 @@
           "maxSelect": 1,
           "cascadeDelete": true
         }
+      },
+      {
+        "id": "moujc4zw",
+        "name": "mobile_no",
+        "type": "text",
+        "system": false,
+        "required": false,
+        "unique": true,
+        "options": {
+          "min": 14,
+          "max": 15,
+          "pattern": "^\\+?[1-9][0-9]{14,15}$"
+        }
       }
     ]
   },
@@ -306,6 +319,398 @@
         "options": {
           "maxSelect": 1,
           "collectionId": "sulgtq902qbrpu7",
+          "cascadeDelete": false
+        }
+      },
+      {
+        "id": "aowihq5j",
+        "name": "activity",
+        "type": "text",
+        "system": false,
+        "required": false,
+        "unique": false,
+        "options": {
+          "min": 3,
+          "max": 15,
+          "pattern": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "cs64d3syt7g5n26",
+    "name": "reaction",
+    "system": false,
+    "listRule": null,
+    "viewRule": null,
+    "createRule": null,
+    "updateRule": null,
+    "deleteRule": null,
+    "schema": [
+      {
+        "id": "1kosvdkp",
+        "name": "emoji",
+        "type": "text",
+        "system": false,
+        "required": true,
+        "unique": true,
+        "options": {
+          "min": 1,
+          "max": 10,
+          "pattern": ""
+        }
+      },
+      {
+        "id": "alacnpjz",
+        "name": "slug",
+        "type": "text",
+        "system": false,
+        "required": true,
+        "unique": true,
+        "options": {
+          "min": 3,
+          "max": 10,
+          "pattern": "^[A-Za-z0-9_.]+$"
+        }
+      },
+      {
+        "id": "q6h0ocph",
+        "name": "name",
+        "type": "text",
+        "system": false,
+        "required": true,
+        "unique": true,
+        "options": {
+          "min": 3,
+          "max": 20,
+          "pattern": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "rcgc4b0ztu5j2jj",
+    "name": "post_user_reaction",
+    "system": false,
+    "listRule": null,
+    "viewRule": null,
+    "createRule": null,
+    "updateRule": null,
+    "deleteRule": null,
+    "schema": [
+      {
+        "id": "rrtfavta",
+        "name": "user",
+        "type": "user",
+        "system": false,
+        "required": true,
+        "unique": false,
+        "options": {
+          "maxSelect": 1,
+          "cascadeDelete": false
+        }
+      },
+      {
+        "id": "p4mpn94k",
+        "name": "post",
+        "type": "relation",
+        "system": false,
+        "required": true,
+        "unique": false,
+        "options": {
+          "maxSelect": 1,
+          "collectionId": "sulgtq902qbrpu7",
+          "cascadeDelete": false
+        }
+      },
+      {
+        "id": "kfbjah1h",
+        "name": "reaction",
+        "type": "relation",
+        "system": false,
+        "required": true,
+        "unique": false,
+        "options": {
+          "maxSelect": 1,
+          "collectionId": "cs64d3syt7g5n26",
+          "cascadeDelete": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "89t5u0mssw9hken",
+    "name": "comment_user_reaction",
+    "system": false,
+    "listRule": null,
+    "viewRule": null,
+    "createRule": null,
+    "updateRule": null,
+    "deleteRule": null,
+    "schema": [
+      {
+        "id": "jlah3mnk",
+        "name": "user",
+        "type": "user",
+        "system": false,
+        "required": true,
+        "unique": false,
+        "options": {
+          "maxSelect": 1,
+          "cascadeDelete": false
+        }
+      },
+      {
+        "id": "1o9v6i0i",
+        "name": "comment",
+        "type": "relation",
+        "system": false,
+        "required": true,
+        "unique": false,
+        "options": {
+          "maxSelect": 1,
+          "collectionId": "qny3la80jxvqld2",
+          "cascadeDelete": false
+        }
+      },
+      {
+        "id": "wn8wlkja",
+        "name": "reaction",
+        "type": "relation",
+        "system": false,
+        "required": true,
+        "unique": false,
+        "options": {
+          "maxSelect": 1,
+          "collectionId": "cs64d3syt7g5n26",
+          "cascadeDelete": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "5lik4glsy386cz4",
+    "name": "shop",
+    "system": false,
+    "listRule": null,
+    "viewRule": null,
+    "createRule": null,
+    "updateRule": null,
+    "deleteRule": null,
+    "schema": [
+      {
+        "id": "oxeqhl5e",
+        "name": "name",
+        "type": "text",
+        "system": false,
+        "required": true,
+        "unique": false,
+        "options": {
+          "min": 3,
+          "max": 20,
+          "pattern": ""
+        }
+      },
+      {
+        "id": "tdaatg7k",
+        "name": "slug",
+        "type": "text",
+        "system": false,
+        "required": true,
+        "unique": true,
+        "options": {
+          "min": 4,
+          "max": 20,
+          "pattern": "^[A-Za-z][A-Za-z0-9_.]{4,20}$"
+        }
+      },
+      {
+        "id": "9c4v6pg7",
+        "name": "cover",
+        "type": "file",
+        "system": false,
+        "required": false,
+        "unique": false,
+        "options": {
+          "maxSelect": 1,
+          "maxSize": 5242880,
+          "mimeTypes": [
+            "image/jpg",
+            "image/jpeg",
+            "image/png",
+            "image/svg+xml",
+            "image/gif"
+          ],
+          "thumbs": [
+            "1000x0"
+          ]
+        }
+      },
+      {
+        "id": "irayz50z",
+        "name": "avatar",
+        "type": "file",
+        "system": false,
+        "required": false,
+        "unique": false,
+        "options": {
+          "maxSelect": 1,
+          "maxSize": 5242880,
+          "mimeTypes": [
+            "image/jpg",
+            "image/jpeg",
+            "image/png",
+            "image/svg+xml",
+            "image/gif"
+          ],
+          "thumbs": [
+            "0x500"
+          ]
+        }
+      },
+      {
+        "id": "ko7piwxj",
+        "name": "slogan",
+        "type": "text",
+        "system": false,
+        "required": false,
+        "unique": false,
+        "options": {
+          "min": null,
+          "max": 100,
+          "pattern": ""
+        }
+      },
+      {
+        "id": "idju1nil",
+        "name": "about",
+        "type": "text",
+        "system": false,
+        "required": false,
+        "unique": false,
+        "options": {
+          "min": null,
+          "max": 250,
+          "pattern": ""
+        }
+      },
+      {
+        "id": "1i67bpj8",
+        "name": "owner",
+        "type": "user",
+        "system": false,
+        "required": true,
+        "unique": false,
+        "options": {
+          "maxSelect": 1,
+          "cascadeDelete": true
+        }
+      },
+      {
+        "id": "vwpdqzau",
+        "name": "blacklist",
+        "type": "user",
+        "system": false,
+        "required": false,
+        "unique": false,
+        "options": {
+          "maxSelect": 100,
+          "cascadeDelete": false
+        }
+      },
+      {
+        "id": "jajzbvqv",
+        "name": "images",
+        "type": "file",
+        "system": false,
+        "required": false,
+        "unique": false,
+        "options": {
+          "maxSelect": 1,
+          "maxSize": 5242880,
+          "mimeTypes": [
+            "image/jpg",
+            "image/jpeg",
+            "image/png",
+            "image/svg+xml",
+            "image/gif"
+          ],
+          "thumbs": [
+            "0x500"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "c2z8are7x7hmmkm",
+    "name": "subscriber",
+    "system": false,
+    "listRule": null,
+    "viewRule": null,
+    "createRule": null,
+    "updateRule": null,
+    "deleteRule": null,
+    "schema": [
+      {
+        "id": "hbp0lqdf",
+        "name": "shop",
+        "type": "relation",
+        "system": false,
+        "required": true,
+        "unique": false,
+        "options": {
+          "maxSelect": 1,
+          "collectionId": "5lik4glsy386cz4",
+          "cascadeDelete": false
+        }
+      },
+      {
+        "id": "l6op164j",
+        "name": "user",
+        "type": "user",
+        "system": false,
+        "required": true,
+        "unique": false,
+        "options": {
+          "maxSelect": 1,
+          "cascadeDelete": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "lqk9e7fqrw46ywb",
+    "name": "moderator",
+    "system": false,
+    "listRule": null,
+    "viewRule": null,
+    "createRule": null,
+    "updateRule": null,
+    "deleteRule": null,
+    "schema": [
+      {
+        "id": "wxpgicd9",
+        "name": "shop",
+        "type": "relation",
+        "system": false,
+        "required": true,
+        "unique": false,
+        "options": {
+          "maxSelect": 1,
+          "collectionId": "5lik4glsy386cz4",
+          "cascadeDelete": false
+        }
+      },
+      {
+        "id": "cb93syrr",
+        "name": "user",
+        "type": "user",
+        "system": false,
+        "required": true,
+        "unique": false,
+        "options": {
+          "maxSelect": 1,
           "cascadeDelete": false
         }
       }
